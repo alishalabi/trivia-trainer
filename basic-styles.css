@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+}
+
+.trivia-card {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+
+
+
+.trivia-question {
+  /* float: left; */
+  border: 5px solid;
+  width: 40%;
+  padding: 5%;
+  margin: 5%;
+}
+
+.trivia-answer {
+  /* float: right; */
+  border: 5px solid;
+  width: 40%;
+  padding: 5%;
+  margin: 5%;
+}
