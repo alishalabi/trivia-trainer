@@ -1,0 +1,44 @@
+.header {
+  text-align: center;
+}
+
+.trivia-card {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+
+
+
+.trivia-question {
+  border: 5px solid;
+  width: 40%;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.trivia-answer {
+  border: 5px solid;
+  width: 40%;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  background-color: black;
+}
+
+.get-answer-button {
+  text-align: center;
+}
+
+.fyi-section {
+  display: none;
+}
+.fyi-card {
+  border: 5px solid;
+  width: 85%;
+  margin: 5%;
+  padding: 2.5%;
+}
