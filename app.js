@@ -11,7 +11,6 @@ const axios = require("axios")
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const jwt = require("jsonwebtoken")
-const jserviceNode = require("jservice-node")
 const js = require('jservice-node');
 
 // Instantiate express
