@@ -1,6 +1,24 @@
+/* Colors:
+#8783D1
+#AA9ABA
+#73648A
+#453750
+#0C0910
+https://coolors.co/8783d1-aa9aba-73648a-453750-0c0910 */
+
+
+body {
+  /* background-color: #0C0910;
+  color: white; */
+}
+
 .header {
   text-align: center;
+  /* background-color: #8783D1;
+  color: #0C0910 */
 }
+
+
 
 .trivia-card {
   display: flex;
