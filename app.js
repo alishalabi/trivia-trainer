@@ -33,28 +33,48 @@ const auth = require("./controllers/auth.js")(app)
 app.get("/", (req, res) => {
   // console.log("inside get home route")
 
-  // console.log(req.query.term)
-  let queryString = "maine";
-  // FIXME: what does encodeURIComponent do?
-  let term = encodeURIComponent(queryString)
-  let url = "http://en.wikipedia.org/w/api.php?action=opensearch&search="+term+"&limit=1&format=json"
 
 
-  // Axios Method
+  // Grab random question
+  js.random(1, function(error, response, json){
+    if(!error && response.statusCode == 200){
+        console.log(json[0].question);
+        const question = json[0].question;
+        const answer = json[0].answer;
+        const category = json[0].category.title;
+        // console.log(req.query.term)
+        let queryString = answer;
+        // FIXME: what does encodeURIComponent do?
+        let term = encodeURIComponent(queryString)
+        let url = "http://en.wikipedia.org/w/api.php?action=opensearch&search="+term+"&limit=1&format=json"
 
-  axios.get(url)
-  .then(response => {
-    // console.log(response.data[2])
-    // console.log(response.data.url);
-    // console.log(response.data.explanation);
-    res.render("home", {fyiDecript: response.data[2], fyiLink: response.data[3]})
-  })
-  .catch(error => {
-    console.log(error);
+        // Populate Wiki entry Axios Method
+        axios.get(url)
+        .then(response => {
+          // console.log(response.data[2])
+          // console.log(response.data.url);
+          // console.log(response.data.explanation);
+          res.render("home", {
+            fyiDecript: response.data[2],
+            fyiLink: response.data[3],
+            question: question,
+            answer: answer,
+            category: category
+          })
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    } else {
+        console.log(`Error: ${response.statusCode}`);
+    }
   });
+
+
 
 })
 
+// Testing category generation
 const gameCategories = []
 app.get("/game/start", (req, res) => {
     var catOptions = {
@@ -71,6 +91,7 @@ app.get("/game/start", (req, res) => {
       }
   });
 })
+
 
 app.listen(3000, () => {
   console.log('App listening on port 3000!')
