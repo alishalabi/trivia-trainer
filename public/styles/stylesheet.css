@@ -66,6 +66,10 @@ body {
   background-color: blue;
 }
 
+button {
+  color: white;
+}
+
 .fyi-section {
   display: none;
 }
