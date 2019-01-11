@@ -1,3 +1,5 @@
+Live Project: https://trivia-trainer-as.herokuapp.com/
+
 # trivia-binge
 Endless trivia game using Jeopardy's API. Website built in HTML/CSS/JS and Node/Express
 
