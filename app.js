@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 app.use(cookieParser())
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/trivia-binge')
 
 // Connecting controller
 const auth = require("./controllers/auth.js")(app)
@@ -93,6 +94,6 @@ app.get("/game/start", (req, res) => {
 })
 
 
-app.listen(3000, () => {
-  console.log('App listening on port 3000!')
+app.listen(process.env.PORT || 3000, (req, res) => {
+  console.log("Listening at port 3000!")
 })
