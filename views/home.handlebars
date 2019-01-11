@@ -7,27 +7,45 @@
 </div>
 
 <!-- Trivia Section -->
-<div class="trivia-section">
-  <div class="trivia-category">
-    <h3>Category: </h3>
-    <p>{{category}}</p>
-  </div>
-  <h3>Prompt:</h3>
-  <div class="trivia-card">
-    <div class="trivia-question">
-      <p>{{question}}</p>
+<div class="trivia">
+  <!-- <h3>Prompt:</h3> -->
+  <div class="trivia-section">
+    <div class="question-card">
+      <div class="trivia-category">
+        <p>Category: {{category}}</p>
+      </div>
+      <div class="trivia-question">
+        <p>Q: <span id="question">{{question}}</span></p>
+        <button id="speak" onclick="pronounce()"><img src="https://img.icons8.com/metro/1600/speaker.png" style="width:20px;height:20px;" /></button>
+      </div>
     </div>
+
     <div id="answer" class="trivia-answer">
-      <p>{{answer}}</p>
+      <div class="trivia-answer-inner">
+        <div class="trivia-answer-front">
+          <p>Hover For Answer</p>
+        </div>
+        <div class="trivia-answer-back">
+          <p>A: {{answer}}</p>
+          <div class="fyi-card">
+            <p>Did You Know?</p>
+            <p>{{fyiDecript}}</p>
+            <!-- <p>
+              Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
+            </p> -->
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 
 <!-- Button Section -->
-<div class="button-section">
+<!-- <div class="button-section">
   <div id="show" class="get-answer-button">
     <button onclick="showAnswer()"><p>Show Answer</p></button>
-  </div>
+  </div> -->
   <div id="question" class="new-question-button">
     <button onclick="window.location.reload()"><p>New Question</p></button>
   </div>
@@ -35,7 +53,7 @@
 
 
 <!-- "Did You Know?" Section -->
-<div id="fyi" class="fyi-section">
+<!-- <div id="fyi" class="fyi-section">
   <h3>Did You Know?</h3>
   <div class="fyi-card">
     <p>{{fyiDecript}}</p>
@@ -43,4 +61,4 @@
       Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
     </p>
   </div>
-</div>
+</div> -->
