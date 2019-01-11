@@ -96,3 +96,7 @@ Handlebars (HTML Template)
 # trivia-binge
 Endless trivia game using Jeopardy's API. Website built in HTML/CSS/JS and Node/Express
 
+Wikipedia Edge Cases:
+1. Words beginning with "the"
+2. Words that are italicize
+3. Words that redirect to "{{this}} could refer to: " (Ex: Rubik)
