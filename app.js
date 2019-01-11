@@ -31,29 +31,21 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/trivia-binge')
 const auth = require("./controllers/auth.js")(app)
 
 app.get("/", (req, res) => {
-  // console.log("inside get home route")
 
-
-
-  // Grab random question
+  // Grab one random question from jservice-node
   js.random(1, function(error, response, json){
     if(!error && response.statusCode == 200){
         console.log(json[0].question);
         const question = json[0].question;
         const answer = json[0].answer;
         const category = json[0].category.title;
-        // console.log(req.query.term)
         let queryString = answer;
-        // FIXME: what does encodeURIComponent do?
         let term = encodeURIComponent(queryString)
         let url = "http://en.wikipedia.org/w/api.php?action=opensearch&search="+term+"&limit=1&format=json"
 
-        // Populate Wiki entry Axios Method
+        // Populate Wiki entry using axios
         axios.get(url)
         .then(response => {
-          // console.log(response.data[2])
-          // console.log(response.data.url);
-          // console.log(response.data.explanation);
           res.render("home", {
             fyiDecript: response.data[2],
             fyiLink: response.data[3],
