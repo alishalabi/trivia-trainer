@@ -10,6 +10,7 @@ https://coolors.co/8783d1-aa9aba-73648a-453750-0c0910 */
 body {
   /* background-color: #0C0910;
   color: white; */
+  background-imange: linear-gradient(#453750, )
 }
 
 .header {
@@ -48,7 +49,21 @@ body {
 }
 
 .get-answer-button {
+  display: block;
   text-align: center;
+}
+
+.get-answer-button button {
+  background-color: green;
+}
+
+.new-question-button {
+  display: none;
+  text-align: center;
+}
+
+.new-question-button button {
+  background-color: blue;
 }
 
 .fyi-section {

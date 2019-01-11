@@ -30,7 +30,21 @@
 }
 
 .get-answer-button {
+  display: block;
   text-align: center;
+}
+
+.get-answer-button button {
+  background-color: green;
+}
+
+.new-question-button {
+  display: none;
+  text-align: center;
+}
+
+.new-question-button button {
+  background-color: blue;
 }
 
 .fyi-section {
