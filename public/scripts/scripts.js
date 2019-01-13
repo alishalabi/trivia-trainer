@@ -6,7 +6,7 @@ function pronounce() {
     var utterThis = new SpeechSynthesisUtterance(questionSpeech);
     utterThis.lang = "en-AU";
     utterThis.rate = 0.9;
-    utterThis.pitch = 1.5;
+    utterThis.pitch = 1.4;
     window.speechSynthesis.speak(utterThis);
 }
 
