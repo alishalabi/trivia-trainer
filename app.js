@@ -61,8 +61,17 @@ app.get("/", (req, res) => {
         console.log(`Error: ${response.statusCode}`);
     }
   });
+})
 
-
+app.get("/sample", (req, res) => {
+  js.random(9, function(error, response, json){
+    if(!error && response.statusCode == 200){
+      const samples = json
+        res.render("sample", {samples: samples})
+    } else {
+        console.log(`Error: ${response.statusCode}`);
+    }
+});
 
 })
 

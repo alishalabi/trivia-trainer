@@ -120,3 +120,14 @@ button {
   width: 85%;
   font-size: 8px;
 }
+
+.sample {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.sample-card {
+  border: solid 5px;
+  padding: 5px;
+  margin: 20px;
+}
