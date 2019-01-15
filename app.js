@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
   // Grab one random question from jservice-node
   js.random(1, function(error, response, json){
     if(!error && response.statusCode == 200){
-        console.log(json[0].question);
+        // console.log(json[0].question);
         const question = json[0].question;
         const answer = json[0].answer;
         const category = json[0].category.title;
@@ -65,13 +65,14 @@ app.get("/", (req, res) => {
 })
 
 // Render Homepage: Single Question by ID
-app.get("/a/:id", (req, res) => {
-  const reference = {
-    id: req.params.id,
+app.get("/a/:category/:value", (req, res) => {
+  const options = {
+    value: req.params.value,
+    category: req.params.category,
   }
-  js.clues(reference, function(error, response, json){
+  js.clues(options, function(error, response, json){
     if(!error && response.statusCode == 200){
-        console.log(json[0].question);
+        // console.log(json);
         const question = json[0].question;
         const answer = json[0].answer;
         const category = json[0].category.title;
@@ -93,6 +94,17 @@ app.get("/a/:id", (req, res) => {
         .catch(error => {
           console.log(error);
         });
+    } else {
+        console.log(`Error: ${response.statusCode}`);
+    }
+  });
+})
+
+app.get("/sample", (req, res) => {
+  js.random(12, function(error, response, json){
+    if(!error && response.statusCode == 200){
+      const samples = json
+        res.render("sample", {samples: samples})
     } else {
         console.log(`Error: ${response.statusCode}`);
     }

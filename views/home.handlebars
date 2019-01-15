@@ -12,7 +12,7 @@
   <div class="trivia-section">
     <div class="question-card">
       <div class="trivia-category">
-        <p>Category: {{category}}</p>
+        <p><span class="category-span">Category:</span> {{category}}</p>
       </div>
       <div class="trivia-question">
         <p>Q: <span id="question">{{question}}</span></p>
@@ -27,13 +27,6 @@
         </div>
         <div class="trivia-answer-back">
           <p>A: {{answer}}</p>
-          <div class="fyi-card">
-            <p>Did You Know?</p>
-            <p>{{fyiDecript}}</p>
-            <!-- <p>
-              Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
-            </p> -->
-          </div>
         </div>
       </div>
     </div>
@@ -42,14 +35,71 @@
 </div>
 
 <!-- Button Section -->
-<!-- <div class="button-section">
-  <div id="show" class="get-answer-button">
-    <button onclick="showAnswer()"><p>Show Answer</p></button>
-  </div> -->
+
   <div id="question" class="new-question-button">
     <button onclick="window.location.reload()"><p>New Question</p></button>
   </div>
+<!-- </div> -->
+
+<div class="button-section">
+  <div id="show" class="get-answer-button">
+    <button onclick="showAnswer()"><p>Show Answer</p></button>
+  </div>
 </div>
+
+<!-- FYI Section -->
+<!-- Default Configuration -->
+<div class="standard" id="standard-id">
+  <div class="fyi-section">
+    <div class="hero-card">
+      <div class="hero-img">
+        <img src="assets/tracy-default.png" height="300px" width="300px"/>
+      </div>
+      <div class="hero-text">
+        <h3>Tracy The</h3>
+        <h3>Trivia Trainer</h3>
+      </div>
+    </div>
+    <div class="info-card">
+      <!-- <div class="arrow bottom">
+        <div class="info-text">
+            <p>Did You Know?</p>
+            <p>{{fyiDecript}}</p>
+            <p>
+              Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
+            </p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- Speaking Configuration -->
+<div class="speaking" id="speak-id">
+  <div class="fyi-section">
+    <div class="hero-card">
+      <div class="hero-img">
+        <img src="assets/tracy-speak.png" height="300px" width="300px"/>
+      </div>
+      <div class="hero-text">
+        <h3>Tracy the</h3>
+        <h3>Trivia Trainer</h3>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="arrow bottom">
+        <div class="info-text">
+            <p>Did You Know?</p>
+            <p>{{fyiDecript}}</p>
+            <p>
+              Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- "Did You Know?" Section -->

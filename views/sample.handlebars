@@ -1,12 +1,16 @@
 <div class="sample">
   {{#each samples}}
   <div class="sample-card">
-    <h4>Category: {{this.category.title}}</h4>
-    <h3>Question: {{this.question}}</h3>
-    <h5>Answer: {{this.answer}}</h5>
-    <p>Ali Shalabi</p>
-    <p>Email: ali.shalabi@makeschool.students.com</p>
-    <p>Github: alishalabi</p>
+    <div class="sample-card-top">
+      <h4>Category: {{this.category.title}}</h4>
+      <h3>Question: {{this.question}}</h3>
+      <h5>Answer Id: {{this.id}}</h5>
+    </div>
+    <div class="sample-card-bottom">
+      <p class="ali">Ali Shalabi</p>
+      <p>Email: ali.shalabi@makeschool.students.com</p>
+      <p>Github: alishalabi</p>
+    </div>
   </div>
   {{/each}}
 </div>

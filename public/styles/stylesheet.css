@@ -6,11 +6,15 @@
 #0C0910
 https://coolors.co/8783d1-aa9aba-73648a-453750-0c0910 */
 
+/* New colors */
+/* #097054
+#FFDE00
+#6599FF
+#FF9900 */
 
 body {
-  /* background-color: #0C0910;
-  color: white; */
-  /* background-image: linear-gradient(#8783D1, #453750); */
+  background-color: #6599FF;
+  color: white ;
 }
 
 .header {
@@ -35,7 +39,8 @@ body {
   border: 5px solid;
   width: 40%;
   padding: 5%;
-  margin: 5%
+  margin: 5%;
+  background-color: #4663a2;
 }
 
 .trivia-answer {
@@ -78,10 +83,11 @@ body {
   left: 0;
   top: 0;
   backface-visibility: hidden;
+  border: 5px solid #FF9900;
 }
 
 .trivia-answer-back {
-  background-color: dodgerblue;
+  background-color: #4663a2;
   color: white;
   transform: rotateY(180deg);
   z-index: 1;
@@ -90,6 +96,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  border: 5px solid;
   backface-visibility: hidden;
 }
 
@@ -105,10 +112,13 @@ body {
 .new-question-button {
   display: block;
   text-align: center;
+  margin: 10px;
 }
 
 .new-question-button button {
-  background-color: blue;
+  background-color: #097054;
+  width: 35%;
+  height: 5em;
 }
 
 button {
@@ -121,13 +131,90 @@ button {
   font-size: 8px;
 }
 
-.sample {
-  display: grid;
-  grid-template-columns: auto auto auto;
+
+.category-span {
+  font-family: Georgia;
 }
 
+.fyi-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+
+}
+
+.hero-card {
+  width: 25%;
+}
+
+.hero-img {
+
+}
+
+.hero-text {
+  border: solid 2px;
+  text-align: center;;
+}
+
+.info-card {
+  padding: 20px;
+  padding-left: 15%;
+}
+
+.info-text {
+    color: black;
+    background-color: #f8f8f8;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    margin-right: 10%;
+}
+
+.info-text .arrow {
+  border-style: solid;
+  position: absolute;
+}
+
+.bottom {
+  border-color: #c8c8c8 transparent transparent transparent;
+  border-width: 8px 8px 0px 8px;
+  bottom: -8px;
+}
+
+.default {
+  display: block;
+}
+
+.speaking {
+  display: none;
+}
+
+.sample {
+  background-color: white;
+  color: black;
+  margin: 0px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+
+
 .sample-card {
-  border: solid 5px;
-  padding: 5px;
-  margin: 20px;
+  width: 70%;
+  padding-left: 10px;
+}
+
+.sample-card-top {
+  width: 100%;
+  height: 50%;
+}
+
+.sample-card-bottom {
+  width: 100%;
+  height: 50%;
 }

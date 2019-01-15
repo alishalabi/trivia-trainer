@@ -1,3 +1,13 @@
+function showAnswer() {
+  var standard = document.getElementById("standard-id")
+  standard.style.display = "none";
+  console.log("Show answeer working")
+
+  var speak = document.getElementById("speak-id")
+  speak.style.display = "block";
+
+}
+
 // Pronounce Help Function
 
 let questionSpeech = document.getElementById('question').innerHTML;
@@ -9,18 +19,3 @@ function pronounce() {
     utterThis.pitch = 1.4;
     window.speechSynthesis.speak(utterThis);
 }
-
-// function showAnswer() {
-//   var answer = document.getElementById("answer")
-//   answer.style.backgroundColor = "white";
-//
-//   var fyi = document.getElementById("fyi")
-//   fyi.style.display = "block";
-//
-//   var show = document.getElementById("show")
-//   show.style.display= "none";
-//
-//   var question = document.getElementById("question")
-//   question.style.display = "block";
-//
-// }
