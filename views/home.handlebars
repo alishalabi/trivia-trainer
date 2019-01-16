@@ -17,14 +17,17 @@
         </div>
         <div class="trivia-question">
           <p>Q: <span id="question">{{question}}</span></p>
-          <button id="speak" onclick="pronounce()"><img src="https://img.icons8.com/metro/1600/speaker.png" style="width:20px;height:20px;" /></button>
+          <div class="speech-div">
+            <img src="assets/tracy-speak.png" height="100px" width="100px"/>
+            <button id="speak" onclick="pronounce()"><img src="https://img.icons8.com/metro/1600/speaker.png" style="width:20px;height:20px;" /></button>
+          </div>
         </div>
       </div>
 
       <div id="answer" class="trivia-answer">
-        <div class="trivia-answer-inner">
-          <div class="trivia-answer-front">
-            <p>Hover For Answer</p>
+        <div id="inner" class="trivia-answer-inner">
+          <div onclick="showAnswer()" class="trivia-answer-front">
+            <p>Click For Answer</p>
           </div>
           <div class="trivia-answer-back">
             <p>A: {{answer}}</p>
@@ -38,15 +41,15 @@
   <!-- Button Section -->
 
     <div id="question" class="new-question-button">
-      <button onclick="window.location.reload()"><p>New Question</p></button>
+      <button onclick="window.location.reload()">New Question</button>
     </div>
   <!-- </div> -->
 
-  <div class="button-section">
+  <!-- <div class="button-section">
     <div id="show" class="get-answer-button">
       <button onclick="showAnswer()"><p>Show Answer</p></button>
     </div>
-  </div>
+  </div> -->
 
   <!-- FYI Section -->
   <!-- Default Configuration -->
@@ -88,14 +91,14 @@
         </div>
       </div>
       <div class="info-card">
-        <div class="arrow bottom">
-          <div class="info-text">
-              <p>Did You Know?</p>
-              <p>{{fyiDecript}}</p>
-              <p>
-                Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
-              </p>
-          </div>
+
+        <div class="info-text">
+          <div class="arrow right bottom"></div>
+            <p>Did You Know?</p>
+            <p>{{fyiDecript}}</p>
+            <p>
+              Would you like to know more? - <a target="_blank" href={{fyiLink}}>{{fyiLink}}</a>
+            </p>
         </div>
       </div>
     </div>

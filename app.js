@@ -101,7 +101,7 @@ app.get("/a/:category/:value", (req, res) => {
 })
 
 app.get("/sample", (req, res) => {
-  js.random(12, function(error, response, json){
+  js.random(6, function(error, response, json){
     if(!error && response.statusCode == 200){
       const samples = json
         res.render("sample", {samples: samples})

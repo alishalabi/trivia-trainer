@@ -16,6 +16,7 @@ body {
   margin: 0;
   /* padding: 1em; */
   color: white ;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .homepage {
@@ -31,12 +32,21 @@ body {
   color: #0C0910 */
 }
 
+.header h1 {
+  font-size: 5em;
+  margin-bottom: 0;
+}
 
+.header h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
 
 .trivia-section {
   display: flex;
   flex-direction: row;
   font-size: 25px;
+  padding-top: 10px;
 }
 
 .trivia-category {
@@ -48,15 +58,17 @@ body {
   width: 40%;
   padding: 5%;
   margin: 5%;
+  margin-top: 10px;
   background-color: #4663a2;
 }
 
 .trivia-answer {
-  border: 5px solid;
+  /* border: 5px solid; */
   width: 40%;
   height: 100%;
   padding: 0%;
   margin: 5%;
+  margin-top: 10px;
   background-color: transparent;
   perspective: 1000px;
 }
@@ -70,7 +82,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.trivia-answer:hover .trivia-answer-inner {
+.trivia-answer.show-answer .trivia-answer-inner {
   transform: rotateY(180deg);
 }
 
@@ -92,7 +104,7 @@ body {
   left: 0;
   top: 0;
   backface-visibility: hidden;
-  border: 5px solid #FF9900;
+  /* border: 5px solid #FF9900; */
 }
 
 .trivia-answer-back {
@@ -122,12 +134,18 @@ body {
   display: block;
   text-align: center;
   margin: 10px;
+
+
 }
 
 .new-question-button button {
   background-color: #097054;
   width: 35%;
   height: 5em;
+  font-size: 25px;
+  padding: 5px;
+  height: 75px;
+  width: 250px;
 }
 
 button {
@@ -168,7 +186,7 @@ button {
 
 .info-card {
   padding: 20px;
-  padding-left: 15%;
+  padding-left: 5%;
 }
 
 .info-text {
@@ -188,8 +206,9 @@ button {
 
 .bottom {
   border-color: #c8c8c8 transparent transparent transparent;
-  border-width: 8px 8px 0px 8px;
-  bottom: -8px;
+  border-width: 20px 0px 0px 20px;
+  bottom: 10px;
+  left: -20px;
 }
 
 .default {
@@ -208,7 +227,7 @@ button {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 
@@ -226,4 +245,8 @@ button {
 .sample-card-bottom {
   width: 100%;
   height: 50%;
+}
+
+.sample-answer {
+  transform: rotate(180deg);
 }
