@@ -12,6 +12,31 @@ https://coolors.co/8783d1-aa9aba-73648a-453750-0c0910 */
 #6599FF
 #FF9900 */
 
+@font-face {
+  font-family: "Alien-Encounter";
+  src: url(ALIEEI__.TTF);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+
+}
+
+@keyframes fade-in {
+  from {opacity: 0}
+  to {opacity}
+}
+
 body {
   margin: 0;
   /* padding: 1em; */
@@ -27,19 +52,25 @@ body {
 }
 .header {
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Alien-Encounter', 'Orbitron', sans-serif;
+  /* animation: 1s ease-out 0s 1 spin; */
+  /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+  animation: 2s ease-out 0s 1 fade-in;
   /* background-color: #8783D1;
   color: #0C0910 */
 }
 
 .header h1 {
+  animation: 1s ease-out 0s 1 spin;
   font-size: 5em;
   margin-bottom: 0;
+  /* font-weight: normal; */
 }
 
 .header h2 {
   font-size: 3em;
   margin-top: 0;
+  font-weight: normal;
 }
 
 .trivia-section {
