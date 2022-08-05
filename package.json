@@ -20,6 +20,6 @@
     "jservice-node": "^0.2.3",
     "jsonwebtoken": "^8.4.0",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.4.3"
+    "mongoose": "^5.7.5"
   }
 }
